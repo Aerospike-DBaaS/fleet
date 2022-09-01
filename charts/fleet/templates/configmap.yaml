@@ -8,7 +8,7 @@ data:
       "agentImage": "{{ template "system_default_registry" . }}{{.Values.agentImage.repository}}:{{.Values.agentImage.tag}}",
       "agentImagePullPolicy": "{{ .Values.agentImage.imagePullPolicy }}",
       "apiServerURL": "{{.Values.apiServerURL}}",
-      "apiServerCA": "{{b64enc .Values.apiServerCA}}",
+      "apiServerCA": "{{.Values.apiServerCA}}",
       "agentCheckinInterval": "{{.Values.agentCheckinInterval}}",
       "ignoreClusterRegistrationLabels": {{.Values.ignoreClusterRegistrationLabels}},
       "bootstrap": {
